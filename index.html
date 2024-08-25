@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeKeep</title>
+    <!-- Tailwind CSS CDN for Development (Use local build for Production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="search-bar bg-white rounded-md shadow-lg z-10">
+            <form class="flex items-center p-2">
+                <input type="text" placeholder="Search snippets..."
+                    class="w-full rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent">
+                <button type="submit"
+                    class="bg-gray-800 text-white rounded-md px-4 py-1 ml-2 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50">
+                    Search
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        <!-- Tags Section -->
+        <section id="tags" class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Tags</h2>
+            <div class="flex flex-wrap gap-2">
+                <!-- Tags will be inserted here dynamically -->
+            </div>
+        </section>
+
+        <!-- Snippets Section -->
+        <section id="snippets">
+            <h2 class="text-xl font-semibold mb-2">Snippets</h2>
+            <div class="space-y-4">
+                <!-- Snippets will be inserted here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 CodeKeep. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/search.js" defer></script>
+
+</body>
+</html>
